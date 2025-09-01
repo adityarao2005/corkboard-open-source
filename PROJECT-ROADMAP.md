@@ -1,103 +1,80 @@
-# GDSC Open Source Project Planning & Documentation Template
+# Corkboard Project Planning & Documentation
 
 ## Table of Contents
-  * [Purpose](#purpose)
   * [:bulb: Project Description](#-bulb--project-description)
   * [:compass: Implementation Plan](#-compass--implementation-plan)
   * [:clipboard: Team Management](#-clipboard--team-management)
   * [:athletic_shoe: Sprint Planning](#-athletic-shoe--sprint-planning)
 
-## Purpose 
-### What is this?
-This template is meant to serve as a guideline for open source project leads planning, and documenting their projects, as well as managing their team of developers. You, as a lead, can begin filling out this project once you have a rough idea of what the project will be. Every project is different, so I'd like to emphasize that it is a guideline, and can be adapted and expanded upon to meet your project's needs. Every project should, however, abide by the scrum agile team development framework, and following this guideline will facilitate that. If you have any questions/comments about this document, please don't hesitate to contact me, @rawamily on discord. 
-
-### Who's this for?
-This document is for both the lead and developer's reference. Once this document is complete, it will be provided to the general open source applicants (i.e. your prospective developers), as they'll be choosing which project they want to commit to, so make sure to make it appealing! That being said you, as the lead, are free to continue making edits to this document throughout the projects timeline, and you likely will need to, however **please have it completed prior to the start of the project in September**. Planning early will make your job as a lead a lot easier during the semester as you balance this role with other commitments, so start as soon as you can!
-
-
-### How should I fill it out?
-It's recommended to follow the markdown template provided. You can copy the contents of this file and commit it to your project's repository, so that applicants, and eventually, your developers, will have easy access to it. Note that the actual guidelines start in the following section, [Project Desctiption](#project-description), so you shouldn't have this section, [Purpose](#purpose), in the final document. Each section/sub-section contains instructions for you as the lead to fill it out. All the instructions are italicized, and again, they shouldn't be in the final document so please comment them out or delete them. Some sections are prefilled, but feel free to edit them to your project's needs. 
 
 ## :bulb: Project Description
-*Brief overview of the project, its objectives, and its significance. The list of objectives should briefly define **what** the project accomplishes. The list of stakeholders should briefly define **who** the main users/people affected by this project are. This section should provide context for the team, and should also provide them with any technical background information needed to understand the problem being addressed by your project. Feel free to include links/references to projects or whatever else that inspired you.*
 
-### Objectives
-1. Objective 1
-2. Objective 2
-3. Objective 3
+**Corkboard** is an event discovery app focused on small music venues, shows, and communities in Hamilton. Users will be able to:
 
-### Stakeholders
+- Browse upcoming events from real local sources (venues, bands, zines, etc.)
+- View events on a timeline and/or map UI
+- Filter by genre, time, location, or vibe
+- Create accounts to save or share events with friends
+- Receive personalized event suggestions (potentially using vector search or RAG-based techniques)
 
-- Stakeholder 1
-- Stakeholder 2
-- Stakeholder 3
-
+Unlike Eventbrite or Facebook Events, Corkboard is focused **only** on the music scene and includes smaller shows that would otherwise be buried.
 
 ## :compass: Implementation Plan
 
 ### Project Timeline
-*Describe the major project milestones that you will aim for over the course of the year. Milestones should be oriented around the level of completeness your project attains toward the end product. It's a good idea to have Milestone 1 be a minimum viable product, something that satisfies the main business logic of the product with minimal code, then work to improving the project through following milestones. That was you can insure a working product by the end of the year.*
 
-- **Milestone 1 (MVP):** Description, Date
-- **Milestone 2:** Description, Date
-- **Milestone 3:** Description, Date
-- ...
+| Phase | Description |
+|-------|-------------|
+| **Phase 1 – MVP** | - Frontend Mobile MVP <br> - Backend MVP <br> - Initial Database <br> - Event scraper/curation from 2–3 Hamilton sources<br> - Static map or timeline view |
+| **Phase 2 – Accounts & Filters** | - User auth (email or Google OAuth)<br> - Save/share events<br> - Genre, venue, and date filters<br> - Support recurring events |
+| **Phase 3 – Personalization & Discovery** | - Embedding-based matching or local vector search <br> - Real-time updates |
+| **Phase 4 – Polish & Admin Tools** | - Animations and clean UX polish <br> - More sources / Curation <br> - Basic administrator web page |
+
+---
 
 ### Tech Stack
-*Determine a list of options for your tech stack. Ideally at this point, you'd list multiple frameworks that you'd pick from later, after onboarding your developers, so that you know what your team mates are most comfortable/interested in working with.*
-- **Frontend Framework:** [e.g., React, Angular, Vue.js]
-- **Backend Framework:** [e.g., Node.js, Django, Spring Boot]
-- **Database:** [e.g., PostgreSQL, MySQL, MongoDB]
-- **Other Technologies/Libraries:**
-  - Technology 1
-  - Technology 2
-  - ...
+- **Frontend:** React Native, TailwindCSS
+- **Backend:** Firebase (Auth, Firestore, Cloud Functions)
+- **Hosting:** Firebase Hosting
+- **Map SDK:** Google Maps SDK
+- **Storage:** Firebase Storage or Cloudinary
+- **Search / ML:** OpenAI embeddings, Pinecone or ChromaDB
+- **External APIs:** Spotify Web API, IG scraping (optional), Eventbrite (optional)
+- **Design:** Figma
 
-### Project Structure 
-*Describe the high-level structure of the project, including directories, modules, and how components/modules interact. For instance, you may need a frontend directory and a backend directory. In your backend directory you may have a designated module for different components of the project, etc. Keep it high level and don't include biolerplate. Include a diagram if you'd like!*
+### Project Structure
+- /frontend → React Native app
+- /backend → Firebase Cloud Functions
+- /admin-dashboard → Web interface for event moderation
+- /assets → Flyers, logo, public images
 
-### API Documentation
-*Optional: Include some high-level descriptions of the APIs that will need to be developed. You can organize this however you'd like.*
-- **API Endpoint:** [URL]
-- **API Documentation Tool:** [e.g., Swagger, Postman]
-  
 ### Testing & CI/CD
-*Your project should have a formal testing plan that will complement the code acceptance of each pull request. The tests themselves may be written by your devs, but you should try to define a plan/framework for how they should write/execute their tests. It be great if you could integrate automated testing and deployment, but manual testing works as well. Describe the test plans, metrics/measures you'll use such as coverage, and tools such as specific testing frameworks that match your tech stack, automation tools like GitHub Actions, Jenkins, etc.*
+- **Testing Frameworks:** Jest for frontend  
+- **CI:** GitHub Actions  
+- Pull requests require passing tests and reviews  
+- Use Firestore local emulator during dev  
 
-### Hosting 
-*Optional: if you plan to use services to host and deploy the application list them below. Later on, you can append an architecture diagram to this section.*
-- **Application Hosting:** [e.g., GKE, AWS, Heroku, Azure]
-- **Database Hosting:** [e.g., Google Cloud Storage, AWS RDS, MongoDB Atlas]
-- **Additional Services:** []
+---
 
 ## :clipboard: Team Management
 
-### Team Members
-*For now, determine approximately how many developers and of what type you would need for your project. After recruitment and onboarding, list the names that will fulfill each role*
-- **Scrum Master & Product Owner:** [Lead's Name]
+### Team Members (Initial Plan)
+- **Scrum Master & Product Owner:** [Harrison Johns](https://github.com/johnsh9656)  
 - **Frontend Developers:**
-  - [Name]
-  - [Name]
+  - TBD  
 - **Backend Developers:**
-  - [Name]
-  - [Name]
-- **_Other Type_ Developers:**
-  - [Name]
-  - [Name]
-  - [Name]
-  
-
+  - TBD  
+- **Design / UX / ML Support:**
+  - TBD
 
 ### Team Communication
-*You should be meeting with your team mates weekly. For this section, document a meeting frequency for reviews and retrospectives. Times will be chosen after onboarding.*
-- **Communication Platform:** Discord
+- **Platform:** Discord  
 - **Meeting Schedule:**
-  - Sprint Review: [Time and Frequency]
-  - Sprint Retrospective: [Time and Frequency]
-  - Other Meetings: [Specify]
+  - Sprint Review: Weekly
+  - Sprint Retrospective: Weekly
+  - Other Meetings: Potential for in-person coding sessions depending on team availability
 
 ### Roles and Responsibilities
-*This section defines the responsibility of each role, you may edit to fit your project's needs.*
 
 - **Scrum Master:**
   - Flush out project's boilerplate 
@@ -116,57 +93,38 @@ It's recommended to follow the markdown template provided. You can copy the cont
   - Report defects
 
 ### Collaboration Tools
-*Pick a collaboration/organization tool that will be used to define your sprint timelines, including the milestones you defined earlier. You should be able to integrate GitHub issues into this tool, and it should be kept up to date over the course of the project [e.g., GitHub Projects, Kanban boards, etc.]*
+We will be using GitHub Projects as a way to organize our project as use of this system will make it easy for us to adhere to the Scrum framework. We will use a Kanban Board style system which will allow sprint progress to be easily monitored. Issues will be assigned to developers, and are expected to be completed by a designated due date. Developers will work in a branch, then submit a pull request to be reviewed by the Scrum Master before being merged to the main branch, ultimately closing the respective issue. 
 
 ### Code Acceptance: The Definition of Done
-*You may edit the below DoD to match your project/preferences.*
 
 Below we define the Definition of Done for this project, i.e. what needs to the included in a pull request for the pull request to be accepted by the Product Owner:
 - Code Complete (satisfies feature associated to the ticket)
 - Passed Code Review by Scrum Master
 - Passed Unit Tests/Other testing developed for the feature
-- Documentation Updated
+- Documentation Updated (Sufficient Commenting)
 - Ready to be integrated with Main Branch (no merge conflicts)
 
-
+---
 
 ## :athletic_shoe: Sprint Planning
-### High Level Goals for Each Sprint
-*This section is meant to facilitate your future sprint planning, and allow you to estimate a more detailed project timeline. For each milestone you defined, break it up into 2-4 sprints, and describe the goals as well as expected duration for each sprint.*
 
-#### <u>Milestone 1</u>
+| Sprint | Focus |
+|--------|-------|
+| **Sprint 1 (Phase 1 – MVP)** | - Set up repo, folder structure, mobile skeleton (React Native or Expo) <br> - Design core event card UI & static timeline <br> - Initialize database (Firebase/Supabase) |
+| **Sprint 2 (Phase 1 – MVP)** | - Static or lightly dynamic map view <br> - Event detail modal/pages <br> - Add curated static events (manual input or JSON) |
+| **Sprint 3 (Phase 1–2 Bridge)** | - Basic scraping/curation from 2–3 local sources (IG, record shops) <br> - Implement event submission form (internal/admin-only for now) <br> - Start integrating Google Maps SDK |
+| **Sprint 4 (Phase 2 – Accounts & Filters)** | - Add email/password or Google login (Firebase Auth) <br> - Save/share event bookmarks per user <br> - Implement genre/venue/date filters |
+| **Sprint 5 (Phase 3 – Personalization & Discovery)** | - Set up vector store (e.g. ChromaDB or Pinecone) <br> - Generate embeddings for event titles/descriptions <br> - Implement basic personalized sort/match pipeline |
+| **Sprint 6 (Phase 4 – Polish & Admin Tools)** | - Web-based admin tool for approving/moderating events <br> - UX polish, animations, transitions <br> - Cleanup, bug fixing, and internal demo/deploy prep |
 
-**Sprint 1**: [Description of what features will be achieved by the end of this sprint], [Expected length of sprint in weeks (Should be 1-2 weeks)]. 
+---
 
-**Sprint 2**: ...
- 
-#### <u>Milestone 2</u>
+## 📌 Notes
+- This file will evolve as the team grows and planning continues.
 
-**Sprint 3**: ... 
+### Additional Information & Resources
 
-...
-
-### Sprint Planning 
-*Below is a template for sprint planning for your future use. You can follow it as much as you'd like, so long as you're able to generate reasonably sized tickets for your members each sprint, and said tickets will bring you to your milestones by the target date you declared.*
-
-*Some more resources for sprint Planning:*
+*Here is some additional information on Sprint Planning and the Scrum Framework!*
 - *[Atlassian: Sprint Planning](https://www.atlassian.com/agile/scrum/sprint-planning#:~:text=What%20is%20sprint%20planning%3F,with%20the%20whole%20scrum%20team.)*
 - *[Scrum in 20 mins](https://www.youtube.com/watch?v=SWDhGSZNF9M&ab_channel=CodexCommunity)*
 
-#### Sprint Duration
-- _Sprint Length:_ [e.g., 2 weeks]
-- _Start Date:_ [Date]
-- _End Date:_ [Date]
-
-#### High Level Sprint Goals
-1. Goal 1
-2. Goal 2
-3. Goal 3
-
-#### User Stories (Sample)
-
-| ID   | User Story                                  | Priority | Story Points | Assignee |
-|------|---------------------------------------------|----------|--------------|----------|
-| US01 | As a [user role], I want to [feature]       | High     | 5            | Dev A    |
-| US02 | As a [user role], I want to [feature]       | Medium   | 3            | Dev B    |
-| US03 | As a [user role], I want to [feature]       | Low      | 2            | Dev C    |
