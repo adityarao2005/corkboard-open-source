@@ -1,18 +1,46 @@
-# Open-Source Project Template
+<h1 align="center">📍 Corkboard</h1>
 
+## 🎧 Project Overview
 
-:wave: Welcome to the Open-Source Team! This repository will serve as an example repo for how our projects should be structured and managed through GitHub. Our goal is to maintain a high development standard and follow the popular open-source project structures and standards we see in our favourite apps and tools.
+**Corkboard** is a mobile-first app for discovering local music shows in Hamilton.
 
-## :compass: Repo Navigation
-**.github:** This folder contains Github's automatically supported community health files. It allows us to generate templates for issues and pull requests, as well as define GitHub Actions. In this particular folder, we included the following:
-- **ISSUE_TEMPLATE:** a folder containing issue templates
-- **pull_request_template.md:** a pull request template
-- **workflows:** a folder containing a simple sample Github Actions workflow that you can modify to have automated testing and deployment.
+Breaking into the city’s live music scene can be tough, especially for students or newcomers. Corkboard makes it easy to discover indie gigs, pub shows, house events, and pop-up performances through a clean, map-based and timeline-based feed. The app curates content from community sources like Instagram, Facebook, and venue calendars, as well as users.
 
-**PLAN-TEMPLATE.MD:** This is the planning & documentation template that each lead will be responsible for completing. 
+---
 
+### 🔑 Key Features (Planned for MVP)
+- 📍 Map and timeline views of upcoming shows
+- 🎫 Event detail pages with flyer, cost, genre, venue
+- 🧾 Show submission form with moderation queue
+- 🔎 Filtering by genre, venue type, and date
+- 🧠 Personalized show recommendations (embeddings-based ranking)
+- 🧑‍💻 Admin dashboard for curators
 
+---
 
-Author: Rawan Mahdi
+### 🛠️ Technologies
+- **Frontend:** React Native, TailwindCSS
+- **Backend:** Firebase (Auth, Firestore, Cloud Functions)
+- **Hosting:** Firebase Hosting
+- **Map SDK:** Google Maps SDK
+- **Storage:** Firebase Storage or Cloudinary
+- **Search / ML:** OpenAI embeddings, Pinecone or ChromaDB
+- **External APIs:** Spotify Web API, IG scraping (optional), Eventbrite (optional)
 
-## Resources
+---
+## Contributors :handshake:
+
+| Contributor                                                                                                     | Expertise & Tools                                                                                                                                                                                                                                   | Notable Contributions                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Harrison Johns**](https://github.com/johnsh9656) <br/><i>Project Lead</i> |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  | 
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+
+## For More Information.....
+### [View the Project Roadmap](./PROJECT-ROADMAP.md)
+
