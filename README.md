@@ -34,7 +34,7 @@ Breaking into the city’s live music scene can be tough, especially for student
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**Harrison Johns**](https://github.com/johnsh9656) <br/><i>Project Lead</i> |  |  |
 | [**Ian Yeh**](https://github.com/ian-yeh) <br/><i>Frontend Team</i> | | |
-| [**Billy Wu**](https://github.com/Billy423) ***Backend Developer*** |  |  |  |
+| [**Billy Wu**](https://github.com/Billy423) <br/><i>Backend Developer</i> |  |  |  |
 |  |  |  |  | 
 |  |  |  |  |
 |  |  |  |  |
@@ -43,5 +43,6 @@ Breaking into the city’s live music scene can be tough, especially for student
 
 ## For More Information.....
 ### [View the Project Roadmap](./PROJECT-ROADMAP.md)
+
 
 
