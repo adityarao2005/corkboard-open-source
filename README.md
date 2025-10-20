@@ -40,11 +40,12 @@ Breaking into the city’s live music scene can be tough, especially for student
 | [**Yanna Lazarova**](https://github.com/yanna-nl) <br/><i>Frontend Team</i> | | |
 | [**Austin Bray**](https://github.com/austinbray77) <br/><i>Backend Developer</i> |  |  |  |
 | [**Shiv Patel**](https://github.com/Shiv-sp) <br/><i>Frontend Developer</i> |  |  |  |
-|  |  |  |  |
+| [**Ahmed Zafar**](https://github.com/ahmed-z5645) <br/><i>Backend Developer</i> |  |  |  |
 |  |  |  |  |
 
 ## For More Information.....
 ### [View the Project Roadmap](./PROJECT-ROADMAP.md)
+
 
 
 
